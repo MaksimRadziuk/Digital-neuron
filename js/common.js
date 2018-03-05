@@ -58,7 +58,14 @@ $(document).ready(function(){
         }
     });
 
-
+    $('.noteHolder>input').hover(
+        function(){
+            $('.noteHolder>.note').css('display', 'block');
+        },
+        function(){
+            $('.noteHolder>.note').css('display', 'none');
+        }
+    );
 
 
 
