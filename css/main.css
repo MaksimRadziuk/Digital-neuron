@@ -1,4 +1,4 @@
-xs* {
+* {
 	font-weight: 500;
 	font-family: Uni sans;
 }
@@ -11,6 +11,9 @@ a:hover, a:focus{
 .col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,
 .col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12 {
 	padding: 0;
+}
+#commonWrap {
+	overflow-x:hidden;!important
 }
 
 
@@ -2354,6 +2357,7 @@ footer .rightPart .callback {
 	}
 	header .col-xs-3 {
 		width: 50%;
+		padding-right: 0;
 	}
 	header .callback_box>a {
 		font-size: 14px;
@@ -2724,7 +2728,7 @@ footer .rightPart .callback {
 	.slick-prev:before, .slick-next:before {
 		display: none;
 	}
-	.slick-prev {
+	section.rate .slick-prev {
 		width: 25px;
 		height: 28px;
 		background-position: center center;
@@ -2733,17 +2737,17 @@ footer .rightPart .callback {
 		background-image: url(../img/arrow-prev.png);
 		left: -35px;
 	}
-	.slick-next{
+	section.rate .slick-next{
 		width: 25px;
 		height: 28px;
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
-		background-image: url(../img/arrow-next.png);
+		background-image: url(../img/arrow-next.png);!important
 		right: -35px;
 	}
 	.slick-prev:focus, .slick-prev:hover {
-		background-image: url(../img/arrow-prev.png);
+		background-image: url(../img/arrow-prev.png);!important
 		opacity: 1;
 	}
 	.slick-next:focus,  
@@ -2841,6 +2845,16 @@ footer .rightPart .callback {
 		font-size: 10px;
 	}
 }
+@media all and (max-width: 505px) {
+	.calculator_wrap .input_wrap.noteHolder>.note {
+		right: 0;
+		top: 30px;
+		background-image:url(../img/note-mobile-bcg.png);
+		padding-left: 15px;
+		padding-right: 15px;
+		width: 160px;
+	}
+}
 
 @media all and (max-width:475px) {
 	.marketing_wrap>.marketing_row {
@@ -2863,10 +2877,10 @@ footer .rightPart .callback {
 	}
 }
 @media all and (max-width:425px) {
-	.slick-next {
+	section.rate .slick-next {
 		right: -10px;
 	}
-	.slick-prev {
+	section.rate .slick-prev {
 		left: -10px;
 	}
 	header h1 {
@@ -2918,5 +2932,51 @@ footer .rightPart .callback {
 @media all and (max-width: 350px) {
 	.order_wrap .form_wrap input {
 		width: 100%;
+	}
+	body {
+		width: 100vw;
+		overflow-x:hidden;
+	}
+}
+
+@media all and (max-width: 340px) {
+	header h1, footer .leftPart h3 {
+		font-size: 16px;
+	}
+	header .callback_box>a, 
+	footer .rightPart .text>a.phone, 
+	footer .rightPart .text>a.mail {
+		font-size: 12px;
+	}
+	header .callback_box {
+		margin-top: 11px;
+	}
+	section.offer .col-sm-8 {
+		padding: 0;
+	}
+	section.testOffer h2, section.calculator h3
+	 {
+		width: 100%;
+	}
+	section.start .mobile_content, 
+	section.rate .mobile_content .mobile_wrap {
+		width: 100%;
+		margin-left: 0;
+	}
+	section.advantage .col-xs-4 {
+		padding: 0;
+	}
+	.order_wrap {
+		padding-right: 0;
+		padding-left: 0;
+		width: 100%;
+		margin-left: 0;
+	}
+	.order_wrap .form_wrap input {
+		width: 70%;
+	}
+	section.test .testTab {
+		padding-left: 40px;
+		padding-right: 20px;
 	}
 }
