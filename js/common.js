@@ -53,6 +53,21 @@ $(document).ready(function(){
             $('.test .scale .sum5000').addClass('active');
             $('.test .scale .sum4000').removeClass('active');
         }
+        if (innerWidth <=767 && $('#question1').is(':visible')) {
+            $('.test .scale .pointer').css('bottom', '37px');
+        }
+        if (innerWidth <=767 && $('#question2').is(':visible')) {
+            $('.test .scale .pointer').css('bottom', '78px');
+        }
+        if (innerWidth <=767 && $('#question3').is(':visible')) {
+            $('.test .scale .pointer').css('bottom', '119px');
+        }
+        if (innerWidth <=767 && $('#question4').is(':visible')) {
+            $('.test .scale .pointer').css('bottom', '161px');
+        }
+        if (innerWidth <=767 && $('#question5').is(':visible')) {
+            $('.test .scale .pointer').css('bottom', '202px');
+        }
         else {
 
         }
@@ -76,6 +91,14 @@ $(document).ready(function(){
         alert('WOOT WOOT, done!');
     });
 
+    if (innerWidth <= 600) {
+        $('section.rate .mobile_wrap').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows:true,
+          loop:false
+        });
+    }
 
 
 });
