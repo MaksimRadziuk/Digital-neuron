@@ -183,15 +183,28 @@ section.offer .scroll {
 	background-position: center;
 	bottom: 20px;
 	left: calc(50% - 13px);
-	animation: scrollMouse 2s ease-in-out infinite;
-	animation-delay: .5s;
+	-webkit-animation: scrollMouse 2s ease-in-out infinite;
+	        animation: scrollMouse 2s ease-in-out infinite;
+	-webkit-animation-delay: .5s;
+	        animation-delay: .5s;
+}
+@-webkit-keyframes scrollMouse {
+	0% {
+		background-image: url(../img/scrolling-mouse-active.png);
+	}
+	80% {
+		-webkit-transform: translateY(10px);
+		        transform: translateY(10px);
+		background-image: url(../img/scrolling-mouse-active.png);
+	}
 }
 @keyframes scrollMouse {
 	0% {
 		background-image: url(../img/scrolling-mouse-active.png);
 	}
 	80% {
-		transform: translateY(10px);
+		-webkit-transform: translateY(10px);
+		        transform: translateY(10px);
 		background-image: url(../img/scrolling-mouse-active.png);
 	}
 }
@@ -339,7 +352,8 @@ section.test .testTab form>input[type="radio"] + label>input[type="text"] {
 	font-size: 18px;
 	color: #0d2471;
 	padding-left: 15px;
-	box-shadow: none;	
+	-webkit-box-shadow: none;
+	        box-shadow: none;	
 	border: none;
 }
 label>input[type="text"]::-webkit-input-placeholder {color:#5c71b5;}
@@ -378,6 +392,7 @@ section.test .scale .pointer {
 	background-position: center center;
 	right: 59%;
 	bottom: -1px;
+	-webkit-transition: all .2s linear;
 	transition: all .2s linear;
 }
 section.test .scale .sum0 {
@@ -417,6 +432,7 @@ section.test .scale .sum5000 {
 	font-size: 16px;
 }
 section.test .scale .sum {
+	-webkit-transition: all .2s linear;
 	transition: all .2s linear;
 }
 section.test .scale .sum.active {
@@ -684,9 +700,15 @@ section.calculator>.container>.row>p {
 	margin-bottom: 50px;
 }
 .calculator_wrap .form_row {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
-	justify-content: flex-end;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
 	padding-right: 40px;
 	margin-bottom: 25px;
 }
@@ -746,9 +768,15 @@ section.calculator>.container>.row>p {
 	outline: none;
 }
 .calculator_wrap .profit_wrap {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	padding-bottom: 20px;
 }
 .calculator_wrap .profit_wrap>.label>.main{
@@ -796,6 +824,7 @@ section.calculator>.container>.row>p {
 	padding-right: 10px;
 	color: #000;
 	display: none;
+	-webkit-transition: all .5 linear;
 	transition: all .5 linear;
 }
 .calculator_wrap .input_wrap.noteHolder>.note p.title {
@@ -812,9 +841,15 @@ section.calculator>.container>.row>p {
 .consultOrder_wrap .form_row {
 	width: 910px;
 	margin:0 auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	margin-bottom: 30px;
 }
 .consultOrder_wrap .form_row>input {
@@ -915,9 +950,15 @@ section.marketing h2 {
 	margin-bottom: 15px;
 	padding-left: 30px;
 	padding-right: 40px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 .marketing_wrap>.marketing_row>* {
 	vertical-align: middle;
@@ -931,9 +972,15 @@ section.marketing h2 {
 }
 .marketing_wrap>.marketing_row>.rightPart {
 	float: right;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
-	justify-content: flex-end;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
 }
 .marketing_wrap>.marketing_row .sum {
 	display: inline-block;
@@ -1086,6 +1133,7 @@ span.info>span.mesage {
 	pointer-events: none;
 	opacity: 0;
 	z-index: 3;
+	-webkit-transition: all .2s linear;
 	transition: all .2s linear;
 }
 span.info:hover>span.mesage {
@@ -1147,9 +1195,15 @@ span.info:hover>span.mesage {
 	padding-left: 70px;
 	padding-right: 70px;
 	padding-bottom: 60px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: flex-start;
-	justify-content: space-between;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 .order_wrap>.timer_wrap {
 	display: inline-block;
@@ -1284,9 +1338,15 @@ section.staff h2 {
 }	
 section.staff .staff_wrap {
 	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: flex-start;
-	justify-content: space-between;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	margin-bottom: 50px;
 }
 section.staff .staff_wrap>.staff_block {
@@ -1301,7 +1361,6 @@ section.staff .staff_wrap>.staff_block>.img_wrap {
 	min-width:140px;
 	background-color: #0d2471;
 	-webkit-box-shadow: 0px 0px 0px 10px rgba(76,143,255,1);
-	-moz-box-shadow: 0px 0px 0px 10px rgba(76,143,255,1);
 	box-shadow: 0px 0px 0px 10px rgba(76,143,255,1);
 	border-radius: 50%;
 	overflow:hidden;
@@ -1349,9 +1408,15 @@ footer {
 	background-color: #1a358e;
 }
 footer>.container>.row {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: flex-start;
-	justify-content: space-between;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 footer .leftPart{
 	display: inline-block;
@@ -1941,7 +2006,10 @@ footer .rightPart .callback {
 		font-size: 16px;
 	}
 	.consultOrder_wrap .form_row {
-		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
 		margin-bottom: 0;
 	}
 	.consultOrder_wrap .form_row>input {
@@ -2325,7 +2393,8 @@ footer .rightPart .callback {
 		top: auto;
 		left: 50%;
 		margin-left: -24px;
-		transform: rotateZ(90deg);
+		-webkit-transform: rotateZ(90deg);
+		        transform: rotateZ(90deg);
 		bottom:-50px;
 	}
 	section.test .testTab .next_btn {
@@ -2334,7 +2403,8 @@ footer .rightPart .callback {
 		bottom: -30px;
 	}
 	section.test .scale .sum {
-		transform: rotateZ(-90deg);
+		-webkit-transform: rotateZ(-90deg);
+		        transform: rotateZ(-90deg);
 		font-size: 11px;
 		left: 54%;
 	}
@@ -2353,7 +2423,8 @@ footer .rightPart .callback {
 		position: absolute;
 		top: 122px;
 		left:-30px;
-		transform: rotateZ(-90deg);
+		-webkit-transform: rotateZ(-90deg);
+		        transform: rotateZ(-90deg);
 		font-size: 12px;
 	}
 	section.test .testTab {
@@ -2494,9 +2565,14 @@ footer .rightPart .callback {
 		padding-bottom: 50px;
 	}
 	.calculator_wrap .form_row, .calculator_wrap .profit_wrap {
-		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
 		text-align: center;
-		justify-content: flex-start;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
 		padding: 0;
 	}
 	.calculator_wrap .form_row>.label {
@@ -2677,7 +2753,10 @@ footer .rightPart .callback {
 	}
 	.order_wrap {
 		background-color: transparent;
-		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
 		margin-top: 0;
 	}
 	.order_wrap>.timer_wrap {
