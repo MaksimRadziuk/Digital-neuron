@@ -26,6 +26,24 @@
 
 <body>
 <div id="commonWrap">
+<!-- POPUP -->
+<div id="popupBackground"></div>
+<div id="callback" class="popup">
+	<div class="popup_wrap">
+		<h3>Форма обратной связи</h3>
+		<form action="">
+			<input type="text" placeholder="Ваше имя">
+			<input type="text" placeholder="Ваш номер телефона">
+			<button class="sendCallback">Отправить</button>
+		</form>
+		<div class="policy_wrap">
+			<input type="checkbox" id="policy3"><label for="policy3">Я согласен на обработку своих персональных данных</label>
+		</div>
+		<div class="close"></div>
+	</div>
+</div>
+
+
 <!-- HEADER -->
 	<header>
 		<div class="container">
@@ -34,13 +52,13 @@
 					<h1>Digital neuron</h1>
 				</div>
 				<div class="col-xs-5">
-					<span class="calculator">калькулятор прибыли</span>
-					<span class="rates">тарифы</span>
+					<a href="#calc" class="calculator">калькулятор прибыли</a>
+					<a href="#rates" class="rates">тарифы</a>
 				</div>
 				<div class="col-xs-3">
 					<div class="callback_box">
 						<a href="tel:+7(000)-000-00-00" class="phone">+7 (000)-000-00-00</a>
-						<button>Перезвонить мне</button>
+						<button class="showCallback">Перезвонить мне</button>
 					</div>
 				</div>
 			</div>
@@ -72,7 +90,7 @@
 	<section class="testOffer">
 		<div class="container">
 			<div class="row">
-				<h2>Пройдите тест и гарантированно получите скидку <span>5000</span> рублей <br>от нашего Маркетолога</h2>
+				<h2>Пройдите тест и получите <strong>бесплатно</strong> консультацию стоимостью <span>5000</span> рублей <br>от нашего Маркетолога</h2>
 				<a href="#test" class="compl_test">Пройти тест</a>
 				<p class="description">Пройдя тест Вы экономите время нашего маркетолога*</p>
 			</div>
@@ -94,44 +112,48 @@
 						</form>
 					</div>
 					<div class="question_wrap" id="question2">
-						<div class="title"><span class="number">2.</span>Какое Вы выбрали направление? Или каким уже занимаетесь?</div>
+						<div class="title"><span class="number">2.</span>Каким способом привлекаете клиентов на данный момент</div>
 						<form action="">
-							<input type="radio" name="q1" id="question2_q1"></input><label for="question1_q1">Авторские (тематические) туры</label>
-							<input type="radio" name="q1" id="question2_q2"></input><label for="question1_q2">Экспедиции</label>
-							<input type="radio" name="q1" id="question2_q3"></input><label for="question1_q3">Трекинги</label>
-							<input type="radio" name="q1" id="question2_q4"></input><label for="question1_q4">Походы</label>
+							<input type="radio" name="q1" id="question2_q1"></input><label for="question1_q1">группа в ВК или FB</label>
+							<input type="radio" name="q1" id="question2_q2"></input><label for="question1_q2">аккаунт в instagram</label>
+							<input type="radio" name="q1" id="question2_q3"></input><label for="question1_q3">контекстная реклама на сайт\лендинг</label>
 							<input type="radio" name="q1" id="question2_q5"></input> <label for="question1_q5" class="free_answer"><input type="text" placeholder="Свой вариант"></label>
 						</form>
 					</div>
 					<div class="question_wrap" id="question3">
-						<div class="title"><span class="number">3.</span>Какое Вы выбрали направление? Или каким уже занимаетесь?</div>
+						<div class="title"><span class="number">3.</span>Как давно занимаетесь организацией туров?</div>
 						<form action="">
-							<input type="radio" name="q1" id="question3_q1"></input><label for="question1_q1">Авторские (тематические) туры</label>
-							<input type="radio" name="q1" id="question3_q2"></input><label for="question1_q2">Экспедиции</label>
-							<input type="radio" name="q1" id="question3_q3"></input><label for="question1_q3">Трекинги</label>
-							<input type="radio" name="q1" id="question3_q4"></input><label for="question1_q4">Походы</label>
-							<input type="radio" name="q1" id="question3_q5"></input> <label for="question1_q5" class="free_answer"><input type="text" placeholder="Свой вариант"></label>
+							<input type="radio" name="q1" id="question3_q1"></input><label for="question1_q1">Только начал</label>
+							<input type="radio" name="q1" id="question3_q2"></input><label for="question1_q2">1 год</label>
+							<input type="radio" name="q1" id="question3_q3"></input><label for="question1_q3">2 года</label>
+							<input type="radio" name="q1" id="question3_q4"></input><label for="question1_q4">3 года</label>
+							<input type="radio" name="q1" id="question3_q5"></input> <label for="question1_q5" class="free_answer">Более 3 лет</label>
 						</form>
 					</div>
 					<div class="question_wrap" id="question4">
-						<div class="title"><span class="number">4.</span>Какое Вы выбрали направление? Или каким уже занимаетесь?</div>
+						<div class="title"><span class="number">4.</span>Есть ли у Вас отзывы или видео из Ваших туров?</div>
 						<form action="">
-							<input type="radio" name="q1" id="question4_q1"></input><label for="question1_q1">Авторские (тематические) туры</label>
-							<input type="radio" name="q1" id="question4_q2"></input><label for="question1_q2">Экспедиции</label>
-							<input type="radio" name="q1" id="question4_q3"></input><label for="question1_q3">Трекинги</label>
-							<input type="radio" name="q1" id="question4_q4"></input><label for="question1_q4">Походы</label>
+							<input type="radio" name="q1" id="question4_q1"></input><label for="question1_q1">Да, есть отзывы и видео</label>
+							<input type="radio" name="q1" id="question4_q2"></input><label for="question1_q2">Есть только отзывы</label>
+							<input type="radio" name="q1" id="question4_q3"></input><label for="question1_q3">Есть только видео</label>
+							<input type="radio" name="q1" id="question4_q4"></input><label for="question1_q4">Нет, я новичок</label>
 							<input type="radio" name="q1" id="question4_q5"></input> <label for="question1_q5" class="free_answer"><input type="text" placeholder="Свой вариант"></label>
 						</form>
 					</div>
 					<div class="question_wrap" id="question5">
-						<div class="title"><span class="number">5.</span>Какое Вы выбрали направление? Или каким уже занимаетесь?</div>
+						<div class="title"><span class="number">5.</span>Как часто Вы хотите набирать группы в свои туры?</div>
 						<form action="">
-							<input type="radio" name="q1" id="question1_q1"></input><label for="question5_q1">Авторские (тематические) туры</label>
-							<input type="radio" name="q1" id="question1_q2"></input><label for="question5_q2">Экспедиции</label>
-							<input type="radio" name="q1" id="question1_q3"></input><label for="question5_q3">Трекинги</label>
-							<input type="radio" name="q1" id="question1_q4"></input><label for="question5_q4">Походы</label>
+							<input type="radio" name="q1" id="question1_q1"></input><label for="question5_q1">1 группа в два месяца</label>
+							<input type="radio" name="q1" id="question1_q2"></input><label for="question5_q2">1 группа в месяц</label>
+							<input type="radio" name="q1" id="question1_q3"></input><label for="question5_q3">2 группы в месяц</label>
 							<input type="radio" name="q1" id="question1_q5"></input> <label for="question5_q5" class="free_answer"><input type="text" placeholder="Свой вариант"></label>
 						</form>
+					</div>
+					<div class="question_wrap" id="question6">
+						<h3>Спасибо что сэкономили моё время!</h3>
+						<p>С Уважением, Михаил - маркетолог в сфере туризма.</p>
+						<div class="img_wrap"><img src="img/Michail.jpg" alt=""></div>
+						<p>Сейчас я проанализирую Ваши ответы и сразу перезвоню Вам.</p>
 					</div>
 
 					<div class="next_btn">Далее</div>
@@ -237,7 +259,7 @@
 		</div>
 	</section>
 <!-- CALCULATOR -->
-	<section class="calculator">
+	<section class="calculator" id="calc">
 		<div class="container">
 			<div class="row">
 				<h2>Мы понимаем, что цель любого бизнеса - это увеличение чистой прибыли.</h2>
@@ -246,10 +268,10 @@
 					<form action="">
 						<div class="form_row">
 							<div class="label">
-								<p class="main">1. Себестоимость организационных моментов</p>
+								<p class="main">1. Стоимость тура для клиентов</p>
 								<p class="description">Перелёт в обе стороны, отели, визы, питание, входные билеты и т.д.</p>
 							</div>
-							<div class="input_wrap"><input type="text"></div>
+							<div class="input_wrap"><input type="number"></div>
 						</div>
 						<div class="form_row">
 							<div class="label">
@@ -257,7 +279,7 @@
 								<p class="description">Прибыль с 1 клиента</p>
 							</div>
 							<div class="input_wrap noteHolder">
-								<input type="text">
+								<input type="number" id="markup">
 								<div class="note">
 									<p class="title">Пометка:</p>
 									<p class="text">В среднем, накрутка идёт от 15 до 50 т.р в зависимости от типа, уникальности и сложности тура.</p>
@@ -268,21 +290,21 @@
 							<div class="label">
 								<p class="main">3. Стоимость привлечения 1 человека с помощью маркетинговых инструментов</p>
 							</div>
-							<div class="input_wrap"><input type="text"></div>
+							<div class="input_wrap"><input type="number" id="personCost"></div>
 						</div>
 						<div class="form_row">
 							<div class="label">
 								<p class="main">4. Количество человек в 1 туре</p>
 							</div>
-							<div class="input_wrap"><input type="text"></div>
+							<div class="input_wrap"><input type="number" id="amount"></div>
 						</div>
-						<button class="count">Посчитать</button>
+						<div class="count">Посчитать</div>
 					</form>
 					<div class="profit_wrap">
 						<div class="label">
 							<p class="main">Чистая прибыль:</p>
 						</div>
-						<div class="input_wrap"><input type="text"></div>
+						<div class="input_wrap"><input type="number" id="result" readonly></div>
 					</div>
 				</div>
 				<h3> Оставьте заявку на консультацию, если Вы готовы начать зарабатывать на путешествиях</h3>
@@ -348,7 +370,7 @@
 		</div>
 	</section>
 <!-- RATE -->
-	<section class="rate">
+	<section class="rate" id="rates">
 		<div class="container">
 			<div class="row">
 				<h2>тарифы</h2>
@@ -379,7 +401,7 @@
 								<td class="invis"></td>
 							</tr>
 							<tr>
-								<td rowspan="2" class="long">Глубокая проработка маркетинговой стратегии<span class="info"><span class="mesage">Анализ бизнес-процессов и разработка маркетинговой стратегии, о</span></span></td>
+								<td rowspan="2" class="long">Глубокая проработка маркетинговой стратегии<span class="info"><span class="mesage">Анализ бизнес-процессов и разработка маркетинговой стратегии, определение тактики и действий. Использование всех предоставленных материалов заказчика, включая заполненный бриф о продукте. Анализ конкурентов и целевой аудитории.</span></span></td>
 								<td class="blue"></td>
 								<td class="blue"></td>
 								<td class="blue"></td>
@@ -394,7 +416,7 @@
 								<td class="invis"></td>
 							</tr>
 							<tr>
-								<td rowspan="2" class="long">Подключение сервиса для автоматизации email рассылок<span class="info"><span class="mesage">Анализ бизнес-процессов и разработка маркетинговой стратегии, о</span></span></td>
+								<td rowspan="2" class="long">Подключение сервиса для автоматизации email рассылок<span class="info"><span class="mesage">Подключение и настройка сервиса для автоматизации email рассылок позволит увеличить конверсию продаж минимум на 10%. Мы поможем наладить процесс рассылки, а также создадим серию продающих писем для ознакомления с брендом, продажи продукта и для увеличения продаж.</span></span></td>
 								<td class="blue"></td>
 								<td class="blue"></td>
 								<td class="blue"></td>
@@ -409,7 +431,7 @@
 								<td class="invis"></td>
 							</tr>
 							<tr>
-								<td rowspan="2" class="long">Создание продающего лендинга<span class="info"><span class="mesage">Анализ бизнес-процессов и разработка маркетинговой стратегии, о</span></span></td>
+								<td rowspan="2" class="long">Создание продающего лендинга<span class="info"><span class="mesage">Сайт — это не визитка компании, а мощный инструмент для генерации прибыли. Это отличное интернет-решение для запуска нового проекта и для увеличения продаж вашего бизнеса. Главная задача лендинга — конвертировать посетителя сайта в покупателя.</span></span></td>
 								<td class="blue"></td>
 								<td class="blue"></td>
 								<td class="blue"></td>
@@ -454,7 +476,7 @@
 								<td class="invis"></td>
 							</tr>
 							<tr>
-								<td rowspan="2" class="long">Написание серии продающих писем<span class="info"><span class="mesage">Анализ бизнес-процессов и разработка маркетинговой стратегии, о</span></span></td>
+								<td rowspan="2" class="long">Написание серии продающих писем<span class="info"><span class="mesage">Пропишем серию продающих писем для email рассылки по базе клиентов, учитывая особенности целевой аудитории. Это эффективный и наименее затратный способ для повышения продаж, который мы обязательно задействуем в маркетинговой стратегии.</span></span></td>
 								<td class="blue"></td>
 								<td class="blue"></td>
 								<td class="blue"></td>
@@ -469,7 +491,7 @@
 								<td class="invis"></td>
 							</tr>
 							<tr>
-								<td rowspan="2" class="long">Настройка и ведение контекстной рекламы<span class="info"><span class="mesage">Анализ бизнес-процессов и разработка маркетинговой стратегии, о</span></span></td>
+								<td rowspan="2" class="long">Настройка и ведение контекстной рекламы<span class="info"><span class="mesage">Контекстная реклама ориентируется на целевую аудиторию и ее главное преимущество — высокая степень передачи информации. Потенциальные клиенты увидят рекламу сразу после ее активации. Контекстная реклама позволяет максимально увеличить возможности, привлекая целевую аудиторию, то есть тех, кому заведомо интересен ваш продукт. Конверсия при подключении контекстной рекламы увеличивается в разы.</span></span></td>
 								<td class="blue"></td>
 								<td class="blue"></td>
 								<td class="blue"></td>
@@ -484,7 +506,7 @@
 								<td class="invis"></td>
 							</tr>
 							<tr>
-								<td rowspan="2" class="long">Настройка и ведение РСЯ и КМС<span class="info"><span class="mesage">Анализ бизнес-процессов и разработка маркетинговой стратегии, о</span></span></td>
+								<td rowspan="2" class="long">Настройка и ведение РСЯ и КМС<span class="info"><span class="mesage"><strong>Рекламная сеть Яндекса (РСЯ)</strong> — бизнес система размещения контекстной рекламы по тематическим и поведенческим факторам на различных сайтах и тематических площадках, которые входят в Рекламную сеть Яндекса.<br><strong>Контекстно-медийная сеть Google (КМС)</strong> — включает миллионы сайтов, новостных страниц, блогов, а также ряда ресурсов Google, таких как Gmail и YouTube. <br>Основным преимуществом РСЯ и КМС является то, что контекстная реклама размещается на тематических сайтах (участниках Рекламной сети Яндекс и Google). Это позволяет расширить охват аудитории, и повысить эффективность существующих, обычных поисковых рекламных кампаний.</span></span></td>
 								<td class="blue"></td>
 								<td class="blue"></td>
 								<td class="blue"></td>
@@ -499,7 +521,7 @@
 								<td class="invis"></td>
 							</tr>
 							<tr>
-								<td rowspan="2" class="long">Настройка таргетированной рекламы в соцсетях<span class="info"><span class="mesage">Анализ бизнес-процессов и разработка маркетинговой стратегии, о</span></span></td>
+								<td rowspan="2" class="long">Настройка таргетированной рекламы в соцсетях<span class="info"><span class="mesage">Задача таргетированной рекламы в соцсетях — привлекать внимание целевой аудитории (настройка по выбранным параметрам) к вашему продукту. <br>В каждой крупной социальной сети существует различные инструменты для таргетированной рекламы. Мы выделим подходящие для вашего бизнеса и настроим.</span></span></td>
 								<td class="blue"></td>
 								<td></td>
 								<td></td>
@@ -514,7 +536,7 @@
 								<td class="invis"></td>
 							</tr>
 							<tr>
-								<td rowspan="2" class="long">Проработка стратегии продвижения группы в ВК и её реализация<span class="info"><span class="mesage">Анализ бизнес-процессов и разработка маркетинговой стратегии, о</span></span></td>
+								<td rowspan="2" class="long">Проработка стратегии продвижения группы в ВК и её реализация<span class="info"><span class="mesage">-Оформление группы ВК<br>-Составление контент-плана<br>-Запуск таргетированной рекламы<br>-Автоворонка (чат-бот)<br>-Призыв с других каналов вступить в группу<br>-Создание конкурсов и акций, направленных на увеличение числа подписчиков<br>-Поиск нестандартных решений для увеличения базы подписчиков</span></span></td>
 								<td class="blue"></td>
 								<td class="blue"></td>
 								<td></td>
@@ -529,7 +551,7 @@
 								<td class="invis"></td>
 							</tr>
 							<tr>
-								<td rowspan="2" class="long">Проработка стратегии продвижения в Инстаграме и её реализация<span class="info"><span class="mesage">Анализ бизнес-процессов и разработка маркетинговой стратегии, о</span></span></td>
+								<td rowspan="2" class="long">Проработка стратегии продвижения в Инстаграме и её реализация<span class="info"><span class="mesage">-Оформление аккаунта ИГ<br>-Составление контент-плана<br>-Запуск МФ/МЛ по целевой аудитории<br>-Подбор хэштегов<br>-Контент для сторис<br>-Подбор блогеров для сотрудничества<br>-Поиск нестандартных решений для увеличения базы подписчиков</span></span></td>
 								<td class="blue"></td>
 								<td class="blue"></td>
 								<td></td>
@@ -544,7 +566,7 @@
 								<td class="invis"></td>
 							</tr>
 							<tr>
-								<td rowspan="2" class="long">Подключение Яндекс метрики / Гугл аналитикс<span class="info"><span class="mesage">Анализ бизнес-процессов и разработка маркетинговой стратегии, о</span></span></td>
+								<td rowspan="2" class="long">Подключение Яндекс метрики / Гугл аналитикс<span class="info"><span class="mesage">Веб-аналитика  дает нам понимание того, что нужно посетителям сайта, а что не имеет никакого значения. Она дает знания, на основании которых можно применять различные решения об изменении стратегии работы сайта. <br>Яндекс метрика и Гугл аналитикс на сегодняшний день являются лидерами сервисов по веб-аналитике.</span></span></td>
 								<td class="blue"></td>
 								<td class="blue"></td>
 								<td></td>
@@ -559,7 +581,7 @@
 								<td class="invis"></td>
 							</tr>
 							<tr>
-								<td rowspan="2" class="long">Подключение коллтрекинга<span class="info"><span class="mesage">Анализ бизнес-процессов и разработка маркетинговой стратегии, о</span></span></td>
+								<td rowspan="2" class="long">Подключение коллтрекинга<span class="info"><span class="mesage">Коллтрекинг — это технология, которая отслеживает обращения по телефону и связывает их с конкретным рекламным источником. <br>Анализируя количество звонков с каждого рекламного канала, становится очевидным целесообразность маркетинговых вложений по каждому каналу, что дает возможность эффективного перераспределения бюджета.</span></span></td>
 								<td class="blue"></td>
 								<td></td>
 								<td></td>
@@ -574,7 +596,7 @@
 								<td class="invis"></td>
 							</tr>
 							<tr>
-								<td rowspan="2" class="long">Внедрение CRM-системы<span class="info"><span class="mesage">Анализ бизнес-процессов и разработка маркетинговой стратегии, о</span></span></td>
+								<td rowspan="2" class="long">Внедрение CRM-системы<span class="info"><span class="mesage">Внедрение CRM-системы — это специальные компьютерные программы, созданные для автоматизации и стандартизации управления отношений с клиентами. <br>CRM-система позволяет: <br>-Хранить контактную информацию клиентов и всю информацию по проекту;<br>-Автоматизировать создание документов и отчетов;<br>-Отслеживать эффективность сотрудников, выполнение ими KPI;<br>-Формировать и получать множество отчетов, которые помогают разобраться в реальном положении дел в компании.<br>-Вовремя информировать клиентов об акциях и новых турах. Также у вас есть возможность видеть в режиме онлайн в какой фазе находится клиент (холодный, тёплый, уже наш клиент, постоянный клиент)</span></span></td>
 								<td class="blue"></td>
 								<td></td>
 								<td></td>

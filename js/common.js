@@ -48,11 +48,13 @@ $(document).ready(function(){
         }
         if ($('#question5').is(':visible')) {
             $('#question5').fadeOut();
+            $('#question6').delay(400).fadeIn();
 
             $('.test .scale .pointer').css('bottom', '346px');
             $('.test .scale .sum5000').addClass('active');
             $('.test .scale .sum4000').removeClass('active');
         }
+
         if (innerWidth <=767 && $('#question1').is(':visible')) {
             $('.test .scale .pointer').css('bottom', '37px');
         }
@@ -101,5 +103,41 @@ $(document).ready(function(){
     }
 
 
+    $('#popupBackground').click(function(){
+        $('#popupBackground').fadeOut();
+        $('.popup').fadeOut();
+    });
+    $('.close').click(function(){
+        $('#popupBackground').fadeOut();
+        $('.popup').fadeOut();
+    });
+    $('.showCallback').click(function(){
+        $('#popupBackground').fadeIn();
+        $('#callback').fadeIn();
+    });
+
+
+
+
+    $(document).ready(function(){
+        $("body").on("click","header .col-xs-5 a", function (event) {
+            event.preventDefault();
+            var id  = $(this).attr('href'),
+                top = $(id).offset().top;
+            $('body,html').animate({scrollTop: top}, 1000);
+        });
+    });
+
+
+    $('.count').click(function(){
+        var markup = $('#markup').val()*1;
+        var personCost = $('#personCost').val()*1;
+        var amount = $('#amount').val()*1;
+        var result1 = markup - personCost;
+        var final = result1 * amount;
+        $('#result').val(final);
+    });
+
 });
+
 
