@@ -1,6 +1,7 @@
 * {
 	font-weight: 500;
 	font-family: Uni sans;
+	transition: all .2s linear;
 }
 a{
 	text-decoration: none;
@@ -8,6 +9,7 @@ a{
 a:hover, a:focus{
 	text-decoration: none;
 }
+
 .col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,
 .col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12 {
 	padding: 0;
@@ -21,7 +23,7 @@ a:hover, a:focus{
 	background-color: rgba(0,0,0,.8);
 	position: fixed;
 	top: 0;
-	left: 0;
+	left: 0; 
 	z-index: 10;
 	display: none;
 }
@@ -90,6 +92,10 @@ a:hover, a:focus{
 	padding-left: 15px;
 	border: none;
 }
+.popup input:focus::-webkit-input-placeholder {color:transparent;}
+.popup input:focus::-moz-placeholder          {color:transparent;}/* Firefox 19+ */
+.popup input:focus:-moz-placeholder           {color:transparent;}/* Firefox 18- */
+.popup input:focus:-ms-input-placeholder      {color:transparent;}
 .popup input:focus {
 	outline: none;
 }
@@ -393,6 +399,10 @@ section.testOffer .compl_test {
 	text-decoration: none;
 	display: block;
 }
+section.testOffer .compl_test:hover {
+	background-color: #e3d179;
+}
+
 section.testOffer p.description {
 	font-size: 16px;
 	text-align: center;
@@ -502,6 +512,17 @@ label>input[type="text"]::-webkit-input-placeholder {color:#5c71b5;}
 label>input[type="text"]::-moz-placeholder          {color:#5c71b5;}/* Firefox 19+ */
 label>input[type="text"]:-moz-placeholder           {color:#5c71b5;}/* Firefox 18- */
 label>input[type="text"]:-ms-input-placeholder      {color:#5c71b5;}
+
+label>input[type="text"]:focus::-webkit-input-placeholder {color:transparent;}
+label>input[type="text"]:focus::-moz-placeholder          {color:transparent;}/* Firefox 19+ */
+label>input[type="text"]:focus:-moz-placeholder           {color:transparent;}/* Firefox 18- */
+label>input[type="text"]:focus:-ms-input-placeholder      {color:transparent;}
+
+section.test .testTab form>input[type="radio"] + label>input[type="text"]:focus::-webkit-input-placeholder {color:transparent;}
+section.test .testTab form>input[type="radio"] + label>input[type="text"]:focus::-moz-placeholder          {color:transparent;}/* Firefox 19+ */
+section.test .testTab form>input[type="radio"] + label>input[type="text"]:focus:-moz-placeholder           {color:transparent;}/* Firefox 18- */
+section.test .testTab form>input[type="radio"] + label>input[type="text"]:focus:-ms-input-placeholder      {color:transparent;}
+
 label>input[type="text"]:focus {
 	outline: none;
 }
@@ -944,6 +965,9 @@ section.calculator>.container>.row>p {
 	text-align: center;
 	cursor: pointer;
 }
+.calculator_wrap .count:hover {
+	background-color: #e3d179;
+}
 .calculator_wrap .count:focus {
 	outline: none;
 }
@@ -1043,6 +1067,11 @@ section.calculator>.container>.row>p {
 	font-size: 24px;
 	text-align:center;
 }
+.consultOrder_wrap .form_row>input:focus::-webkit-input-placeholder {color:transparent;}
+.consultOrder_wrap .form_row>input:focus::-moz-placeholder          {color:transparent;}/* Firefox 19+ */
+.consultOrder_wrap .form_row>input:focus:-moz-placeholder           {color:transparent;}/* Firefox 18- */
+.consultOrder_wrap .form_row>input:focus:-ms-input-placeholder      {color:transparent;}
+
 .consultOrder_wrap .form_row>input:focus {
 	outline: none;
 }
@@ -1068,6 +1097,9 @@ section.calculator h3 {
 	font-size: 24px;
 	border:none;
 	margin-bottom: 10px;
+}
+.consultOrder_wrap button.consultOrder:hover {
+	background-color: #e3d179;
 }
 .consultOrder_wrap .policy_wrap {
 	width: 100%;
@@ -1432,6 +1464,10 @@ span.info:hover>span.mesage {
 	text-align:center;
 	margin-bottom: 15px;
 }
+.order_wrap .form_wrap input:focus::-webkit-input-placeholder {color:transparent;}
+.order_wrap .form_wrap input:focus::-moz-placeholder          {color:transparent;}/* Firefox 19+ */
+.order_wrap .form_wrap input:focus:-moz-placeholder           {color:transparent;}/* Firefox 18- */
+.order_wrap .form_wrap input:focus:-ms-input-placeholder      {color:transparent;}
 .order_wrap .form_wrap input:focus {
 	outline: none;
 }
@@ -1447,6 +1483,9 @@ span.info:hover>span.mesage {
 	border:none;
 	margin-bottom: 10px;
 	margin-top: 10px;
+}
+.order_wrap button.consultOrder:hover {
+	background-color: #e3d179;
 }
 .order_wrap .policy_wrap {
 	width: 100%;
@@ -1589,6 +1628,9 @@ section.staff .portfolio_link>a {
 	font-weight: 700;
 	line-height: 70px;
 }
+section.staff .portfolio_link:hover {
+	background-color:rgba(76,143,255,1);
+}
 /* FOOTER */
 
 footer {
@@ -1683,8 +1725,11 @@ footer .rightPart .callback {
 	text-align: center;
 	line-height: 30px;
 	margin-left: 30px;
+	cursor: pointer;
 }
-
+footer .rightPart .callback:hover {
+	background-color: #e3d179;
+}
 
 @media all and (max-width: 1199px) {
 	header h1 {

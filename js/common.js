@@ -1,18 +1,13 @@
 $(document).ready(function(){
 
-    $(document).ready(function(){
-        $(".testOffer").on("click","a", function (event) {
-            event.preventDefault();
-            var id  = $(this).attr('href'),
-                top = $(id).offset().top;
-            $('body,html').animate({scrollTop: top}, 500);
-        });
-    });
-
+/*SHOW TEST WINDOW*/
     $('.compl_test').click(function(){
         $('section.test').slideDown();
     })
 
+
+
+/*TEST'S SLIDER*/
     $('.test .next_btn').click(function(){
         if ($('#question1').is(':visible')) {
             $('#question1').fadeOut();
@@ -75,6 +70,8 @@ $(document).ready(function(){
         }
     });
 
+
+/*NOTE IN CALCULATOR'S INPUT*/
     $('.noteHolder>input').hover(
         function(){
             $('.noteHolder>.note').css('display', 'block');
@@ -84,7 +81,7 @@ $(document).ready(function(){
         }
     );
 
-
+/*COUNTDOWN IN RATES*/
     $('.countdown').downCount({
         date:'06/03/2018 18:00:00',
         offset: +10
@@ -102,7 +99,7 @@ $(document).ready(function(){
         });
     }
 
-
+/*POPUP*/
     $('#popupBackground').click(function(){
         $('#popupBackground').fadeOut();
         $('.popup').fadeOut();
@@ -115,10 +112,12 @@ $(document).ready(function(){
         $('#popupBackground').fadeIn();
         $('#callback').fadeIn();
     });
+    $('.callback').click(function(){
+        $('#popupBackground').fadeIn();
+        $('#callback').fadeIn();
+    });
 
-
-
-
+/*SLOWSCROLL*/
     $(document).ready(function(){
         $("body").on("click","header .col-xs-5 a", function (event) {
             event.preventDefault();
@@ -128,7 +127,7 @@ $(document).ready(function(){
         });
     });
 
-
+/*CALCULATOR*/
     $('.count').click(function(){
         var markup = $('#markup').val()*1;
         var personCost = $('#personCost').val()*1;
