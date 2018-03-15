@@ -93,7 +93,7 @@ input[type="number"]::-webkit-inner-spin-button {
 	display: block;
 	width: 80%;
 	height: 30px;
-	font-size: 16px;
+	font-size: 1em;
 	color: #000;
 	background-color: #fff;
 	border-radius: 15px;
@@ -723,7 +723,36 @@ section.test #question6 form button {
 	margin:0 auto;
 	margin-top: 15px;
 }
-
+section.test #question6 span.whatsapp {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-image:url(../img/whatsapp-128.png);
+	background-repeat: no-repeat;
+	background-size:100% 100%;
+	background-position:center center;
+	margin-bottom: -5px;
+}
+section.test #question6 span.viber {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-image:url(../img/viber-2-128.png);
+	background-repeat: no-repeat;
+	background-size:100% 100%;
+	background-position:center center;
+	margin-bottom: -5px;
+}
+section.test #question6 span.telegram {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-image:url(../img/Telegram-Desktop-new.png);
+	background-repeat: no-repeat;
+	background-size:100% 100%;
+	background-position:center center;
+	margin-bottom: -5px;
+}
 
 
 /* SUIT */
@@ -996,7 +1025,7 @@ section.calculator>.container>.row>p {
 	outline: none;
 	border: none;
 	padding-left: 20px;
-	font-size: 24px;
+	font-size: 1.5em;
 }
 .calculator_wrap .form_row>.input_wrap>input::-webkit-outer-spin-button,
 .calculator_wrap .form_row>.input_wrap>input::-webkit-inner-spin-button {
@@ -1076,7 +1105,7 @@ section.calculator>.container>.row>p {
 	border: none;
 	background-color: #5c71b5;
 	color: #fff;
-	font-size: 24px;
+	font-size: 1.5em;
 	font-weight: 400;
 	padding-left: 20px;
 }
@@ -1138,7 +1167,7 @@ section.calculator>.container>.row>p {
 	border-radius: 30px;
 	background-color: #fff;
 	color:#000;
-	font-size: 24px;
+	font-size: 1.5em;
 	text-align:center;
 }
 .consultOrder_wrap .form_row>input:focus::-webkit-input-placeholder {color:transparent;}
@@ -2609,7 +2638,7 @@ footer .rightPart .callback:hover {
 	}
 	.consultOrder_wrap .form_row>input {
 		height: 45px;
-		font-size: 14px;
+		font-size: 0.75em;
 	}
 	.consultOrder_wrap button.consultOrder {
 		height: 40px;
@@ -3151,7 +3180,7 @@ footer .rightPart .callback:hover {
 	}
 	.order_wrap .form_wrap input {
 		width: 240px;
-		font-size: 14px;
+		font-size: 0.75em;
 	}
 	.order_wrap button.consultOrder {
 		width: 150px;
