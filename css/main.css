@@ -1,6 +1,7 @@
 * {
 	font-weight: 500;
 	font-family: Uni sans;
+	-webkit-transition: all .2s linear;
 	transition: all .2s linear;
 }
 a{
@@ -9,7 +10,11 @@ a{
 a:hover, a:focus{
 	text-decoration: none;
 }
-
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 .col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,
 .col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12 {
 	padding: 0;
@@ -38,7 +43,8 @@ a:hover, a:focus{
 	position: fixed;
 	left: 50%;
 	top: 50%;
-	transform: translate3d(-50%,-50%,0);
+	-webkit-transform: translate3d(-50%,-50%,0);
+	        transform: translate3d(-50%,-50%,0);
 	background-color: #5c71b5;
 	border-radius: 10px;
 	z-index: 11;
@@ -46,7 +52,9 @@ a:hover, a:focus{
 }
 .popup {
 	
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	
+	        box-sizing: border-box;
 }
 .popup_wrap {
 	width: 100%;
@@ -64,11 +72,13 @@ a:hover, a:focus{
 	background-position: center center;
 	background-size: cover;
 	background-image: url(../img/close-button.png);
-	filter: saturate(0%);
+	-webkit-filter: saturate(0%);
+	        filter: saturate(0%);
 	cursor: pointer;
 }
 .popup .close:hover {
-	filter: saturate(100%);
+	-webkit-filter: saturate(100%);
+	        filter: saturate(100%);
 }
 .popup h3{
 	font-size: 24px;
@@ -172,6 +182,7 @@ header .calculator {
 	text-transform: uppercase;
 	cursor: pointer;
 	border:2px solid #5c71b5;
+	-webkit-transition: all 0.2s linear;
 	transition: all 0.2s linear;
 }
 header .rates {
@@ -189,6 +200,7 @@ header .rates {
 	margin-top: 30px;
 	cursor: pointer;
 	border:2px solid #5c71b5;
+	-webkit-transition: all 0.2s linear;
 	transition: all 0.2s linear;
 }
 header .calculator:hover, header .rates:hover {
@@ -218,6 +230,7 @@ header .callback_box>button {
 	font-weight: 700;
 	color: #272727;
 	border-radius:14px;
+	-webkit-transition: all .2s linear;
 	transition: all .2s linear;
 }
 header .callback_box>button:focus {
@@ -625,19 +638,47 @@ section.test .scale .sum5000.active{
 	display: none;
 }
 section.test .question_wrap h3 {
-	text-align: center;
-	font-size: 24px;
+	text-align: left;
+	font-size: 22px;
 	font-family: Uni sans Heavy CAPS;
+	font-weight: 700;
 	text-transform: uppercase;
 	color: #fff;
 	line-height: 1;
 	margin: 0;
 	margin-bottom: 20px;
 }
+section.test #question6 {
+	margin:0 -40px;
+	vertical-align: top;
+}
+section.test #question6>.wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
 section.test #question6 p{
 	margin: 0;	
-	font-size: 18px;
-	text-align: center;
+	font-size: 16px;
+	text-align: left;
+	font-weight: 400;
+}
+section.test #question6 .leftPart {
+	width: 30%;
+	display: inline-block;
+	height: 100%;
+	min-width: 150px;
+}
+section.test #question6 .rightPart {
+	width: 69%;
+	display: inline-block;
+	height: 100%;
 }
 section.test #question6 .img_wrap {
 	width: 150px;
@@ -649,6 +690,38 @@ section.test #question6 .img_wrap {
 section.test #question6 .img_wrap>img {
 	width: 100%;
 	height: 100%;
+}
+section.test #question6 form {
+	padding-left: 0;
+}
+section.test #question6 form .title {
+	font-size: 18px;
+	text-align: left;
+	font-weight: 700;
+}
+section.test #question6 form input {
+	width: 200px;
+	height: 40px;
+	border-radius: 20px;
+	border:none;
+	margin-top: 20px;
+	padding-left: 20px;
+	color: #000;
+	outline: none;
+}
+section.test #question6 form input:focus {
+	outline: none;
+}
+section.test #question6 form button {
+	display: block;
+	width: 100px;
+	height: 40px;
+	border:none;
+	background-color: #d2b211;
+	border-radius: 20px;
+	color: #000;
+	margin:0 auto;
+	margin-top: 15px;
 }
 
 
@@ -821,7 +894,8 @@ section.start .step_block {
 	margin-bottom: 20px;
 }
 section.start .step_block:hover {
-	filter: saturate(200%);
+	-webkit-filter: saturate(200%);
+	        filter: saturate(200%);
 }
 section.start .step_block.first {
 	background-image:url(../img/1block-start-bcg.png);
@@ -1351,7 +1425,8 @@ span.info>span.mesage:before {
 	width: 30px;
 	height: 30px;
 	background-color: #dcdcdc;
-	transform: rotateZ(45deg);
+	-webkit-transform: rotateZ(45deg);
+	        transform: rotateZ(45deg);
 	position: absolute;
 	left: -10px;
 	top: 20px;
@@ -1978,6 +2053,19 @@ footer .rightPart .callback:hover {
 		width: 100px;
 		height: 100px;
 	}
+	section.test #question6 h3 {
+		font-size: 20px;
+	}
+	section.test #question6 form input {
+		margin-top: 15px;
+		height: 30px;
+		border-radius: 15px;
+	}
+	section.test #question6 form button {
+		margin-top: 15px;
+		height: 30px;
+		border-radius: 15px;
+	}
 }
 
 @media all and (max-width: 767px) {
@@ -2422,6 +2510,12 @@ footer .rightPart .callback:hover {
 		width: 80px;
 		height: 80px;
 	}
+	section.test #question6 h3 {
+		font-size: 15px;
+	}
+	section.test #question6 form .title {
+		font-size: 14px;
+	}
 }
 
 @media all and (max-width: 761px) {
@@ -2523,6 +2617,25 @@ footer .rightPart .callback:hover {
 	}
 	section.test .question_wrap h3 {
 		font-size: 15px;
+	}
+	section.test #question6 .leftPart {
+		width: 10%;
+		min-width: 115px;
+	}
+	section.test .testTab form {
+		margin-top: 5px;
+	}
+	section.test #question6 h3 {
+		font-size: 13px;
+	}
+	section.test #question6 form .title {
+		font-size: 12px;
+	}
+	section.test #question6 form input {
+		margin-top: 5px;
+	}
+	section.test #question6 form button {
+		margin-top: 10px;
 	}
 }
 @media all and (max-width: 670px) {
@@ -2822,7 +2935,7 @@ footer .rightPart .callback:hover {
 	}
 	.calculator_wrap {
 		width: 100%;
-		padding-bottom: 50px;
+		padding: 20px 5px;
 	}
 	.calculator_wrap .form_row, .calculator_wrap .profit_wrap {
 		-webkit-box-orient: vertical;
@@ -2839,9 +2952,13 @@ footer .rightPart .callback:hover {
 		width: 100%;
 		text-align: center;
 	}
+	.calculator_wrap .form_row {
+		margin-bottom: 20px;
+	}
 	.calculator_wrap .form_row>.input_wrap {
 		margin-left: 0;
-		margin-top: 15px;
+		margin-top: 10px;
+		height: 30px;
 	}
 	.calculator_wrap .form_row>.label>.description {
 		display: none;
@@ -3043,6 +3160,7 @@ footer .rightPart .callback:hover {
 		width: 174px;
 		text-align: left;
 		margin:0 auto;
+		padding-left: 20px;
 	}
 	section.staff {
 		display: none;
@@ -3094,6 +3212,11 @@ footer .rightPart .callback:hover {
 		height: 30px;
 		border-radius: 15px;
 	}
+	.consultOrder_wrap .form_row>input.name, 
+	.order_wrap .form_wrap input.name {
+		display: none;
+	}
+
 }
 
 @media all and (max-width: 540px) {
@@ -3153,6 +3276,25 @@ footer .rightPart .callback:hover {
 	}
 	section.offer p {
 		width: 95%;
+	}
+	section.test #question6 .leftPart {
+		display: none;
+	}
+	section.test #question6 .rightPart {
+		width: 100%;
+	}
+	section.test #question6 h3, section.test #question6 p,
+	section.test #question6 form .title {
+		text-align: center;
+	}
+	section.test #question6 form input {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	section.test #question6 {
+		margin-left: -30px;
+		margin-right: -10px;
 	}
 }
 @media all and (max-width: 385px) {

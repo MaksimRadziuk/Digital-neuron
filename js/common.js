@@ -44,6 +44,7 @@ $(document).ready(function(){
         if ($('#question5').is(':visible')) {
             $('#question5').fadeOut();
             $('#question6').delay(400).fadeIn();
+            $('.next_btn').fadeOut();
 
             $('.test .scale .pointer').css('bottom', '346px');
             $('.test .scale .sum5000').addClass('active');
@@ -94,7 +95,7 @@ $(document).ready(function(){
         $('section.rate .mobile_wrap').slick({
           slidesToShow: 1,
           slidesToScroll: 1,
-          arrows:true,
+          arrows:false,
           loop:false
         });
     }
@@ -135,6 +136,11 @@ $(document).ready(function(){
         var result1 = markup - personCost;
         var final = result1 * amount;
         $('#result').val(final);
+    });
+
+
+    $('input').hover(function(){
+        $(this).focus();
     });
 
 });

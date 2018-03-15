@@ -32,8 +32,8 @@
 		<div class="popup_wrap">
 			<h3>Форма обратной связи</h3>
 			<form action="">
-				<input type="text" placeholder="Ваше имя">
-				<input type="text" placeholder="Ваш номер телефона">
+				<input class="name" type="text" placeholder="Ваше имя">
+				<input type="number" placeholder="Ваш номер телефона" pattern="[0-9]*">
 				<button class="sendCallback">Отправить</button>
 			</form>
 			<div class="policy_wrap">
@@ -150,10 +150,21 @@
 						</form>
 					</div>
 					<div class="question_wrap" id="question6">
-						<h3>Спасибо что сэкономили моё время!</h3>
-						<p>С Уважением, Михаил - маркетолог в сфере туризма.</p>
-						<div class="img_wrap"><img src="img/Michail-focus.jpg" alt=""></div>
-						<p>Сейчас я проанализирую Ваши ответы и сразу перезвоню Вам.</p>
+						<div class="wrapper">
+							<div class="leftPart">
+								<div class="img_wrap"><img src="img/Michail-focus.jpg" alt=""></div>
+							</div>
+							<div class="rightPart">
+								<h3>Спасибо что сэкономили моё время!</h3>
+								<p>С Уважением, Михаил - маркетолог в сфере туризма.</p>
+								<p>Сейчас я проанализирую Ваши ответы и сразу перезвоню Вам.</p>
+								<form action="">
+									<div class="title">Напишите, пожалуйста свой номер <span class="wahtsapp"></span><span class="viber"></span><span class="telegram"></span> для связи</div>
+									<input type="number" placeholder="Ваш номер" pattern="[0-9]*">
+									<button class="send">Отправить</button>
+								</form>
+							</div>
+						</div>
 					</div>
 
 					<div class="next_btn">Далее</div>
@@ -271,7 +282,7 @@
 								<p class="main">1. Стоимость тура для клиентов</p>
 								<p class="description">Перелёт в обе стороны, отели, визы, питание, входные билеты и т.д.</p>
 							</div>
-							<div class="input_wrap"><input type="number"></div>
+							<div class="input_wrap"><input type="number" pattern="[0-9]*"></div>
 						</div>
 						<div class="form_row">
 							<div class="label">
@@ -279,7 +290,7 @@
 								<p class="description">Прибыль с 1 клиента</p>
 							</div>
 							<div class="input_wrap noteHolder">
-								<input type="number" id="markup">
+								<input type="number" id="markup" pattern="[0-9]*">
 								<div class="note">
 									<p class="title">Пометка:</p>
 									<p class="text">В среднем, накрутка идёт от 15 до 50 т.р в зависимости от типа, уникальности и сложности тура.</p>
@@ -290,13 +301,13 @@
 							<div class="label">
 								<p class="main">3. Стоимость привлечения 1 человека с помощью маркетинговых инструментов</p>
 							</div>
-							<div class="input_wrap"><input type="number" id="personCost"></div>
+							<div class="input_wrap"><input type="number" id="personCost" pattern="[0-9]*"></div>
 						</div>
 						<div class="form_row">
 							<div class="label">
 								<p class="main">4. Количество человек в 1 туре</p>
 							</div>
-							<div class="input_wrap"><input type="number" id="amount"></div>
+							<div class="input_wrap"><input type="number" id="amount" pattern="[0-9]*"></div>
 						</div>
 						<div class="count">Посчитать</div>
 					</form>
@@ -304,15 +315,15 @@
 						<div class="label">
 							<p class="main">Чистая прибыль:</p>
 						</div>
-						<div class="input_wrap"><input type="number" id="result" readonly></div>
+						<div class="input_wrap"><input type="number" pattern="[0-9]*" id="result" readonly></div>
 					</div>
 				</div>
 				<h3> Оставьте заявку на консультацию, если Вы готовы начать зарабатывать на путешествиях</h3>
 				<div class="consultOrder_wrap">
 					<form action="">
 						<div class="form_row">
-							<input type="text" placeholder="Ваше имя">
-							<input type="text" placeholder="Ваш телефон">
+							<input class="name" type="text" placeholder="Ваше имя">
+							<input type="number" placeholder="Ваш телефон" pattern="[0-9]*">
 						</div>
 						<button class="consultOrder">Оставить заявку</button>
 						<div class="policy_wrap">
@@ -687,7 +698,21 @@
 							<div class="more">Подробнее<span></span></div>
 							<div class="btn_wrap">
 								<div class="btn cost">60 000р.</div>
-								<div class="btn order">заказать</div>
+							</div>
+						</div>
+						<!-- <div class="card">
+							<div class="title">ПАКЕТ “минимум”</div>
+							<ul>
+								<li>Консультирование маркетолога</li>
+								<li>Глубокая проработка маркетинговой стратегии</li>
+								<li>Создание продающего лендинга</li>
+								<li>Настройка и ведение контекстной рекламы (1 месяц)</li>
+								<li>Настройка и ведение РСЯ и КМС (1 месяц)</li>
+								<li>Докрутка и сопровождение проекта</li>
+							</ul>
+							<div class="more">Подробнее<span></span></div>
+							<div class="btn_wrap">
+								<div class="btn cost">60 000р.</div>
 							</div>
 						</div>
 						<div class="card">
@@ -703,7 +728,6 @@
 							<div class="more">Подробнее<span></span></div>
 							<div class="btn_wrap">
 								<div class="btn cost">60 000р.</div>
-								<div class="btn order">заказать</div>
 							</div>
 						</div>
 						<div class="card">
@@ -719,7 +743,6 @@
 							<div class="more">Подробнее<span></span></div>
 							<div class="btn_wrap">
 								<div class="btn cost">60 000р.</div>
-								<div class="btn order">заказать</div>
 							</div>
 						</div>
 						<div class="card">
@@ -735,7 +758,6 @@
 							<div class="more">Подробнее<span></span></div>
 							<div class="btn_wrap">
 								<div class="btn cost">60 000р.</div>
-								<div class="btn order">заказать</div>
 							</div>
 						</div>
 						<div class="card">
@@ -751,25 +773,8 @@
 							<div class="more">Подробнее<span></span></div>
 							<div class="btn_wrap">
 								<div class="btn cost">60 000р.</div>
-								<div class="btn order">заказать</div>
 							</div>
-						</div>
-						<div class="card">
-							<div class="title">ПАКЕТ “минимум”</div>
-							<ul>
-								<li>Консультирование маркетолога</li>
-								<li>Глубокая проработка маркетинговой стратегии</li>
-								<li>Создание продающего лендинга</li>
-								<li>Настройка и ведение контекстной рекламы (1 месяц)</li>
-								<li>Настройка и ведение РСЯ и КМС (1 месяц)</li>
-								<li>Докрутка и сопровождение проекта</li>
-							</ul>
-							<div class="more">Подробнее<span></span></div>
-							<div class="btn_wrap">
-								<div class="btn cost">60 000р.</div>
-								<div class="btn order">заказать</div>
-							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 				<div class="order_wrap">
@@ -797,8 +802,8 @@
 					</div>
 					<div class="form_wrap">
 						<form action="">
-							<input type="text" placeholder="Ваше имя">
-							<input type="text" placeholder="Ваш телефон">
+							<input class="name" type="text" placeholder="Ваше имя">
+							<input type="number" placeholder="Ваш телефон" pattern="[0-9]*">
 							<button class="consultOrder">Оставить заявку</button>
 							<div class="policy_wrap">
 								<input type="checkbox" id="policy1"><label for="policy1">Я согласен на обработку своих персональных данных</label>
