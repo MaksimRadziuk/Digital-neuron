@@ -399,7 +399,7 @@ section.testOffer h2>strong {
 	font-size: 42px;
 	font-family: Uni Sans Heavy CAPS;
 	line-height: 40px;
-	border:1px solid #fe3a2d;
+	text-shadow: 0 0 5px #fe3a2d;
 }
 section.testOffer .compl_test {
 	width: 330px;
