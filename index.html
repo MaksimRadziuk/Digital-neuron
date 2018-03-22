@@ -31,9 +31,16 @@
 	<div id="callback" class="popup">
 		<div class="popup_wrap">
 			<h3>Перезвоним в течение 5 минут</h3>
-			<form action="">
-				<input class="name" type="text" placeholder="Ваше имя">
-				<input type="number" placeholder="Ваш номер телефона" pattern="[0-9]*">
+			<form>
+
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="digital-neuron.ru">
+				<input type="hidden" name="admin_email" value="info@digital-neuron.ru">
+				<input type="hidden" name="form_subject" value="Жду звонка!">
+				<!-- END Hidden Required Fields -->
+
+				<input class="name" name="Name" type="text" placeholder="Ваше имя" required>
+				<input type="number" name="Phone" placeholder="Ваш номер телефона" pattern="[0-9]*" required>
 				<button class="sendCallback">Жду звонка!</button>
 			</form>
 			<div class="policy_wrap">
@@ -158,9 +165,16 @@
 								<h3>Спасибо что сэкономили моё время!</h3>
 								<p>С Уважением, Михаил - маркетолог в сфере туризма.</p>
 								<p>Сейчас я проанализирую Ваши ответы и сразу перезвоню Вам.</p>
-								<form action="">
+								<form>
 									<div class="title">Напишите, пожалуйста свой номер <span class="whatsapp"></span> <span class="viber"></span> <span class="telegram"></span> для связи</div>
-									<input type="number" placeholder="Ваш номер" pattern="[0-9]*">
+
+									<!-- Hidden Required Fields -->
+									<input type="hidden" name="project_name" value="digital-neuron.ru">
+									<input type="hidden" name="admin_email" value="info@digital-neuron.ru">
+									<input type="hidden" name="form_subject" value="Тестовая форма">
+									<!-- END Hidden Required Fields -->
+
+									<input name="Phone" type="number" placeholder="Ваш номер" pattern="[0-9]*" required>
 									<button class="send">Отправить</button>
 								</form>
 							</div>
@@ -320,10 +334,16 @@
 				</div>
 				<h3> Оставьте заявку на консультацию, если Вы готовы начать зарабатывать на путешествиях</h3>
 				<div class="consultOrder_wrap">
-					<form action="">
+					<form>
+
+						<!-- Hidden Required Fields -->
+						<input type="hidden" name="project_name" value="digital-neuron.ru">
+						<input type="hidden" name="admin_email" value="info@digital-neuron.ru">
+						<input type="hidden" name="form_subject" value="Форма под калькулятором">
+						<!-- END Hidden Required Fields -->
 						<div class="form_row">
-							<input class="name" type="text" placeholder="Ваше имя">
-							<input type="number" placeholder="Ваш телефон" pattern="[0-9]*">
+							<input class="name" name="Name" type="text" placeholder="Ваше имя" required>
+							<input type="number" name="Phone" placeholder="Ваш телефон" pattern="[0-9]*" required>
 						</div>
 						<button class="consultOrder">Оставить заявку</button>
 						<div class="policy_wrap">
@@ -801,9 +821,14 @@
 						</div>
 					</div>
 					<div class="form_wrap">
-						<form action="">
-							<input class="name" type="text" placeholder="Ваше имя">
-							<input type="number" placeholder="Ваш телефон" pattern="[0-9]*">
+						<form>
+							<!-- Hidden Required Fields -->
+							<input type="hidden" name="project_name" value="digital-neuron.ru">
+							<input type="hidden" name="admin_email" value="info@digital-neuron.ru">
+							<input type="hidden" name="form_subject" value="Форма под Тарифами">
+							<!-- END Hidden Required Fields -->
+							<input class="name" name="Name" type="text" placeholder="Ваше имя" required>
+							<input type="number" name="Phone" placeholder="Ваш телефон" pattern="[0-9]*" required>
 							<button class="consultOrder">Оставить заявку</button>
 							<div class="policy_wrap">
 								<input type="checkbox" id="policy1" checked><label for="policy1">Я согласен на обработку своих персональных данных</label>

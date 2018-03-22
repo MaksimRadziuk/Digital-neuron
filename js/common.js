@@ -117,6 +117,10 @@ $(document).ready(function(){
         $('#popupBackground').fadeIn();
         $('#callback').fadeIn();
     });
+    $('.consult').click(function(){
+        $('#popupBackground').fadeIn();
+        $('#callback').fadeIn();
+    });
 
 /*SLOWSCROLL*/
     $(document).ready(function(){
@@ -142,6 +146,28 @@ $(document).ready(function(){
     $('input').hover(function(){
         $(this).focus();
     });
+
+
+//E-mail Ajax Send
+    $("form").submit(function() { //Change
+        var th = $(this);
+        $.ajax({
+            type: "POST",
+            url: "../libs/uniMail-master/script/mail.php",
+            data: th.serialize()
+        }).done(function() {
+            $('#popupBackground').fadeOut();
+            $('.popup').fadeOut();
+            setTimeout(function() {
+                // Done Functions
+                th.trigger("reset");
+            }, 1000);
+        });
+        return false;
+    });
+
+
+
 
 });
 
