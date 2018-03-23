@@ -1791,7 +1791,8 @@ section.staff .portfolio_link .rightPart button:hover {
 
 footer {
 	width: 100%;
-	height: 100px;
+	height: auto;
+	min-height: 100px;
 	background-color: #1a358e;
 }
 footer>.container>.row {
@@ -1809,7 +1810,6 @@ footer .leftPart{
 	display: inline-block;
 	float: left;
 	width: 33.333%;
-	height: 100px;
 	padding-top: 20px;
 	color: #fff;
 }
@@ -1843,7 +1843,6 @@ footer .middlePart{
 	display: inline-block;
 	float: left;
 	width: 33.333%;
-	height: 100px;
 	color: #fff;
 }
 footer .middlePart>* {
@@ -1860,8 +1859,8 @@ footer .middlePart a {
 footer .rightPart {
 	width: 33.333%;
 	float: right;
-	height: 100px;
 	padding-top: 20px;
+	position: relative;
 }
 footer .rightPart>* {
 	vertical-align: top;
@@ -1895,8 +1894,10 @@ footer .rightPart .callback {
 	font-size: 12px;
 	text-align: center;
 	line-height: 30px;
-	margin-left: 30px;
 	cursor: pointer;
+	position: absolute;
+	top:17px;
+	right: 0;
 }
 footer .rightPart .callback:hover {
 	background-color: #e3d179;
