@@ -83,13 +83,13 @@ $(document).ready(function(){
     );
 
 /*COUNTDOWN IN RATES*/
-    $('.countdown').downCount({
+    /*$('.countdown').downCount({
         date:'06/03/2018 18:00:00',
         offset: +10
     }, 
     function () {
         alert('WOOT WOOT, done!');
-    });
+    });*/
 
     if (innerWidth <= 600) {
         $('section.rate .mobile_wrap').slick({
@@ -153,22 +153,53 @@ $(document).ready(function(){
         var th = $(this);
         $.ajax({
             type: "POST",
-            url: "../libs/uniMail-master/script/mail.php",
+            url: "http://digital-neuron.ru/libs/uniMail-master/script/mail.php",
             data: th.serialize()
         }).done(function() {
-            $('#popupBackground').fadeOut();
-            $('.popup').fadeOut();
+            $('#thankyou').show();
+            $('#popupBackground').show();
             setTimeout(function() {
                 // Done Functions
+                $('#popupBackground').hide();
+                $('#thankyou').hide();
                 th.trigger("reset");
             }, 1000);
         });
         return false;
     });
 
+    $('#rateSend, #calculatorSend').click(function(){
+        $('#thankyou').show();
+        $('#popupBackground').show();
+        setTimeout(function(){
+            $('#thankyou').hide();
+            $('#popupBackground').hide();
+        }, 1500);
+    });
+    $('#popupSend').click(function(){
+        $('.popup').hide();
+        $('#thankyou').show();
+        setTimeout(function(){
+            $('.popup').hide();
+            $('#popupBackground').hide();
+        }, 1500);
+    });
 
 
 
 });
 
+window.onload=function(){
+var start=Date.now(),
+    r=document.getElementById('countdown');
+(function f(){
+ var diff=Date.now()-start,
+     ns=(((3e5-diff)/1000)>>0),
+     m=(ns/60)>>0,
+     s=ns-m*60;
+ r.textContent=m+':'+((''+s).length>1?'':'0')+s;
+ if(diff>(3e5)){start=Date.now()}
+ setTimeout(f,1000);
+})();
+}
 
