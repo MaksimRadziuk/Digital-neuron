@@ -149,7 +149,26 @@ $(document).ready(function(){
 
 
 //E-mail Ajax Send
-    $("form").submit(function() { //Change
+    $("#testForm").submit(function() { //Change
+        var th = $(this);
+        $.ajax({
+            type: "POST",
+            url: "http://digital-neuron.ru/libs/uniMail-master/script/mail.php",
+            data: th.serialize()
+        }).done(function() {
+            $('#thankyou').show();
+            $('#popupBackground').show();
+            setTimeout(function() {
+                // Done Functions
+                $('section.test').slideUp();
+                $('#popupBackground').hide();
+                $('#thankyou').hide();
+                th.trigger("reset");
+            }, 1500);
+        });
+        return false;
+    });
+    $("#ratesForm").submit(function() { //Change
         var th = $(this);
         $.ajax({
             type: "POST",
@@ -163,12 +182,49 @@ $(document).ready(function(){
                 $('#popupBackground').hide();
                 $('#thankyou').hide();
                 th.trigger("reset");
-            }, 1000);
+            }, 1500);
+        });
+        return false;
+    });
+    $("#calcForm").submit(function() { //Change
+        var th = $(this);
+        $.ajax({
+            type: "POST",
+            url: "http://digital-neuron.ru/libs/uniMail-master/script/mail.php",
+            data: th.serialize()
+        }).done(function() {
+            $('#thankyou').show();
+            $('#popupBackground').show();
+            setTimeout(function() {
+                // Done Functions
+                $('#popupBackground').hide();
+                $('#thankyou').hide();
+                th.trigger("reset");
+            }, 1500);
+        });
+        return false;
+    });
+    $("#popupForm").submit(function() { //Change
+        var th = $(this);
+        $.ajax({
+            type: "POST",
+            url: "http://digital-neuron.ru/libs/uniMail-master/script/mail.php",
+            data: th.serialize()
+        }).done(function() {
+            $('.popup').hide();
+            $('#thankyou').show();
+            $('#popupBackground').show();
+            setTimeout(function() {
+                // Done Functions
+                $('#popupBackground').hide();
+                $('#thankyou').hide();
+                th.trigger("reset");
+            }, 1500);
         });
         return false;
     });
 
-    $('#rateSend, #calculatorSend').click(function(){
+    /*$('#rateSend, #calculatorSend').click(function(){
         $('#thankyou').show();
         $('#popupBackground').show();
         setTimeout(function(){
@@ -183,7 +239,7 @@ $(document).ready(function(){
             $('.popup').hide();
             $('#popupBackground').hide();
         }, 1500);
-    });
+    });*/
 
 
 

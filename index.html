@@ -14,6 +14,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+	<link rel="icon" type="image/eps" href="img/favicon-32.png" sizes="32x32" />
+    <link rel="icon" type="image/eps" href="img/favicon-16.png" sizes="16x16" />
+
 	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css">
 	<link rel="stylesheet" href="libs/slick/slick.css">
 	<link rel="stylesheet" href="libs/slick/slick-theme.css">
@@ -31,11 +34,11 @@
 	<div id="callback" class="popup">
 		<div class="popup_wrap">
 			<h3>Перезвоним в течении 5 минут</h3>
-			<form>
+			<form id="popupForm">
 
 				<!-- Hidden Required Fields -->
 				<input type="hidden" name="project_name" value="digital-neuron.ru">
-				<input type="hidden" name="admin_email" value="info@digital-neuron.ru">
+				<input type="hidden" name="admin_email" value="maxy-m@mail.ru">
 				<input type="hidden" name="form_subject" value="Жду звонка!">
 				<!-- END Hidden Required Fields -->
 				
@@ -115,7 +118,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="testTab">
-					<form>
+					<form id="testForm">
 						<!-- Hidden Required Fields -->
 						<input type="hidden" name="project_name" value="digital-neuron.ru">
 						<input type="hidden" name="admin_email" value="info@digital-neuron.ru">
@@ -342,7 +345,7 @@
 				</div>
 				<h3> Оставьте заявку на консультацию, если Вы готовы начать зарабатывать на путешествиях</h3>
 				<div class="consultOrder_wrap">
-					<form>
+					<form id="calcForm">
 
 						<!-- Hidden Required Fields -->
 						<input type="hidden" name="project_name" value="digital-neuron.ru">
@@ -350,7 +353,7 @@
 						<input type="hidden" name="form_subject" value="Форма под калькулятором">
 						<!-- END Hidden Required Fields -->
 						<div class="form_row">
-							<input class="name" name="Name" type="text" placeholder="Ваше имя" required>
+							<input class="name" name="Name" type="text" placeholder="Ваше имя">
 							<input type="number" name="Phone" placeholder="Ваш телефон" pattern="[0-9]*" required>
 						</div>
 						<button class="consultOrder" id="calculatorSend" type="submit">Оставить заявку</button>
@@ -815,13 +818,13 @@
 						</div>
 					</div>
 					<div class="form_wrap">
-						<form>
+						<form id="ratesForm">
 							<!-- Hidden Required Fields -->
 							<input type="hidden" name="project_name" value="digital-neuron.ru">
 							<input type="hidden" name="admin_email" value="info@digital-neuron.ru">
 							<input type="hidden" name="form_subject" value="Форма под Тарифами">
 							<!-- END Hidden Required Fields -->
-							<input class="name" name="Name" type="text" placeholder="Ваше имя" required>
+							<input class="name" name="Name" type="text" placeholder="Ваше имя">
 							<input type="number" name="Phone" placeholder="Ваш телефон" pattern="[0-9]*" required>
 							<button class="consultOrder" id="rateSend" type="submit">Оставить заявку</button>
 							<div class="policy_wrap">
